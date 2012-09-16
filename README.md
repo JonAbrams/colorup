@@ -35,6 +35,8 @@ An Example
     });
 For the complete example/demo check out [this jsbin](http://jsbin.com/ahoner/25/edit)
 
+And [here's a version without a target](http://jsbin.com/ahoner/27/edit).
+
 Things To Note
 ---
 
