@@ -21,7 +21,7 @@ How do I use it?
 Parameters
 ---
 
-The $("").colorup() function takes one object literal parameter.
+The colorup() function takes one object literal parameter.
 
 *url*: The url for the sprite.
 *target* (optional): The element you want the scrolling to be measured against. If a target isn't specified then the document object will be used by default.
@@ -38,7 +38,7 @@ For the complete example/demo check out [this jsbin](http://jsbin.com/ahoner/25/
 Things To Note
 ---
 
-For some reason, sometimes the 1.8+ versions of jQuery have difficulty figuring out the height of the browser window, and just returns the document height.
+For some reason, sometimes the 1.8+ versions of jQuery have difficulty figuring out the height of the browser window, and just returns the document height which can cause weird behaviour.
 
 Make sure you use the "<!DOCTYPE html>" doctype, and if that doesn't work, try version 1.7.2 of jQuery.
 License
@@ -49,4 +49,4 @@ Use it for anything you want as long as it's for good and not evil.
 Credit
 ---
 
-Created by (Jon Abrams)[http://twitter.com/JonathanAbrams]
+Created by [Jon Abrams](http://twitter.com/JonathanAbrams)
