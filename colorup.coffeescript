@@ -55,5 +55,6 @@
             else
               doc.scrollTop()
           level = 100 - 100 * numerator / (targetHeight - winHeight)
+          level = 0 if level < 0
           bw.height "#{level}%"
 )(jQuery)

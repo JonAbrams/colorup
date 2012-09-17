@@ -53,6 +53,9 @@
             winHeight = win.height();
             numerator = target ? scrollTop - targetTop > 0 ? scrollTop - targetTop : 0 : doc.scrollTop();
             level = 100 - 100 * numerator / (targetHeight - winHeight);
+            if (level < 0) {
+              level = 0;
+            }
             return bw.height("" + level + "%");
           });
         };
