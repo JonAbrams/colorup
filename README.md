@@ -35,9 +35,9 @@ An Example
       url: "http://i.imgur.com/DduzE.png",
       target: "#my_article"
     });
-For the complete example/demo check out [this jsbin](http://jsbin.com/ahoner/25/edit)
+For the complete example/demo check out [this jsbin](http://jsbin.com/ahoner/33/edit)
 
-And [here's a version without a target](http://jsbin.com/ahoner/27/edit).
+And [here's a version without a target](http://jsbin.com/ahoner/31/edit).
 
 Things To Note
 ---
