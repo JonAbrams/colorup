@@ -1,57 +1,59 @@
-$.fn.colorup = (options) ->
-  @each ->
-    logo = $(@)
-    color = $("<div class='.color-ver'></div>").appendTo logo
-    bw = $("<div class='.bw-ver'></div>").appendTo logo
+(($) ->
+  $.fn.colorup = (options) ->
+    @each ->
+      logo = $(@)
+      color = $("<div class='.color-ver'></div>").appendTo logo
+      bw = $("<div class='.bw-ver'></div>").appendTo logo
 
-    if options.url?
-      url = options.url
-    else
-      url = logo.attr("src")
-    img = new Image()
-    img.src = url
-    img.onload = ->
-      width = img.width
-      height = img.height / 2
-
-      logo.css {
-        width
-        height
-        position: "relative"
-      }
-      bw.css {
-        width
-        height: "100%"
-        background: "url(#{url})"
-        position: "absolute"
-        top: 0
-      }
-      color.css {
-        width
-        height
-        background: "url(#{url})"
-        backgroundPosition: "0 -74px"
-      }
-
-      doc = $(document)
-      win = $(window)
-      if options?.target
-        target = options.target
-        targetTop = target.offset().top
+      if options.url?
+        url = options.url
       else
-        target = $(document) # options.target
-        targetTop = 0
-      targetHeight = target.height()
-      doc.scroll ->
-        scrollTop = doc.scrollTop()
-        winHeight = win.height() # Since the window can change, need to check it constantly
-        numerator = 
-          if target
-            if scrollTop - targetTop > 0
-              scrollTop - targetTop
+        url = logo.attr("src")
+      img = new Image()
+      img.src = url
+      img.onload = ->
+        width = img.width
+        height = img.height / 2
+
+        logo.css {
+          width
+          height
+          position: "relative"
+        }
+        bw.css {
+          width
+          height: "100%"
+          background: "url(#{url})"
+          position: "absolute"
+          top: 0
+        }
+        color.css {
+          width
+          height
+          background: "url(#{url})"
+          backgroundPosition: "0 -74px"
+        }
+
+        doc = $(document)
+        win = $(window)
+        if options?.target
+          target = options.target
+          targetTop = target.offset().top
+        else
+          target = $(document) # options.target
+          targetTop = 0
+        targetHeight = target.height()
+        doc.scroll ->
+          scrollTop = doc.scrollTop()
+          winHeight = win.height() # Since the window can change, need to check it constantly
+          numerator = 
+            if target
+              if scrollTop - targetTop > 0
+                scrollTop - targetTop
+              else
+                0
             else
-              0
-          else
-            doc.scrollTop()
-        level = 100 - 100 * numerator / (targetHeight - winHeight)
-        bw.height "#{level}%"
+              doc.scrollTop()
+          level = 100 - 100 * numerator / (targetHeight - winHeight)
+          bw.height "#{level}%"
+)(jQuery)
