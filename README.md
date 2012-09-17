@@ -3,7 +3,7 @@ colorup
 
 A jQuery plugin to slowly colorize an image as a user scrolls down a page
 
-[Here's a demo](http://jsbin.com/ahoner/27)
+[Here's a demo](http://jsbin.com/ahoner/31)
 
 What does it actually do?
 ---
