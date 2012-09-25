@@ -10,7 +10,7 @@ What does it actually do?
 
 Using a sprite containing two versions of an image (such as dark and light versions), this jQuery plugin will slowly "fill up" the image as you scroll down the page.
 
-I made it for [a friend's blog](http://jure-stern.si/en/blog.html).
+I made it for [a friend's blog](http://jure-stern.si/blog/building-responsive-websites-with-less/).
 
 How do I use it?
 ---
